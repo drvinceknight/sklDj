@@ -20,3 +20,19 @@ Install requirements:
     pip install -r requirements.txt
 
 (If you have any errors update pip: `pip install --upgrade pip`)
+
+Navigate to the directory containing manage.py:
+
+    cd sklDj/
+
+Ensure database up to date:
+
+    python manage.py migrate
+
+Run the server:
+
+    python manage.py runserver
+
+Create a super user:
+
+    python manage.py createsuperuser
