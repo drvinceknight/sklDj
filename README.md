@@ -32,3 +32,7 @@ Ensure database up to date:
 Run the server:
 
     python manage.py runserver
+
+Create a super user:
+
+    python manage.py createsuperuser
