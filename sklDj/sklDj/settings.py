@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'frontend',
     'sklDj',
+    'form',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,6 +84,8 @@ DATABASES = {
     }
 }
 
+FILE_UPLOAD_HANDLERS = ("django.core.files.uploadhandler.MemoryFileUploadHandler",
+         "django.core.files.uploadhandler.TemporaryFileUploadHandler",)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
