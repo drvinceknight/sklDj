@@ -1,5 +1,5 @@
 language: python
-before_build:
+before_install:
     - "pip install --upgrade pip"
 python:
   - "2.7"
