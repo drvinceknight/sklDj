@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'frontend',
     'sklDj',
+    'form',
 )
 
 MIDDLEWARE_CLASSES = (
