@@ -8,13 +8,13 @@ A django site as an interface to [sci-kit learn](http://scikit-learn.org/stable/
 
 Setup a virtual env:
 
-  cd sklDJ
-  virtualenv env
+    cd sklDJ
+    virtualenv env
 
 Activate virtual env:
 
-  source env/bin/activate
+    source env/bin/activate
 
 Install requirements:
 
-  pip install -r requirements.txt
+    pip install -r requirements.txt
