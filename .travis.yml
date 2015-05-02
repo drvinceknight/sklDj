@@ -1,0 +1,8 @@
+language: python
+before_install:
+    - "pip install --upgrade pip"
+install: "pip install -r requirements.txt"
+python:
+  - "2.7"
+script:
+  - python sklDj/tests/temp.py
