@@ -4,6 +4,6 @@
 
 <ul>
     {% for algorithm in algorithms_list.all %}
-    <li> <a href={{algorithm.link}}>{{ algorithm.name }}</a> </li>
+    <li> <a href="{% url 'frontend' %}algorithms/{{algorithm.slug}}">{{ algorithm.name }}</a> </li>
     {% endfor %}
 </ul>

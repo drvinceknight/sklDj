@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from frontend.models import Machine_Learning_Models
 
 def index(request):
@@ -7,5 +7,6 @@ def index(request):
     return render(request, 'frontend/index.html', context)
 
 def model_info(request, model_name):
-    algorithm = get_object_or_404(Machine_Learning_Models, pk=identifier)
-    return render(request, 'frontend/index.html')
+    algorithm = get_object_or_404(Machine_Learning_Models, slug=model_name)
+    context = {'algorithm': algorithm}
+    return render(request, 'frontend/models_info.html', context)
