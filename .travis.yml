@@ -1,6 +1,6 @@
 language: python
 before_install:
-  - 'sudo apt-get install -qq python-numpy'
+  - 'sudo apt-get install -qq python-numpy python-scipy'
 install: "pip install -r requirements.txt"
 python:
   - "2.7_with_system_site_packages"
