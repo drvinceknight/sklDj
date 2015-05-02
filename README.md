@@ -18,3 +18,5 @@ Activate virtual env:
 Install requirements:
 
     pip install -r requirements.txt
+
+(If you have any errors update pip: `pip install --upgrade pip`)
