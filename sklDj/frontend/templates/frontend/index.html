@@ -1,1 +1,9 @@
-This is a title page.
+<h1>Web Interface for scikit-learn.</h1>
+
+<h2> List of Machine Learning Models</h2>
+
+<ul>
+    {% for algorithm in algorithms_list.all %}
+    <li> <a href="{% url 'frontend' %}algorithms/{{algorithm.slug}}">{{ algorithm.name }}</a> </li>
+    {% endfor %}
+</ul>
