@@ -1,3 +1,5 @@
+{% extends 'sklDj/base.html' %}
+{% block body_block %}
 <h1>Web Interface for scikit-learn.</h1>
 
 <h2> List of Machine Learning Models</h2>
@@ -7,3 +9,4 @@
     <li> <a href="{% url 'frontend' %}algorithms/{{algorithm.slug}}">{{ algorithm.name }}</a> </li>
     {% endfor %}
 </ul>
+{% endblock %}
