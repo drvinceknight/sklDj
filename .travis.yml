@@ -7,8 +7,13 @@ install:
   # install deps
   - sudo conda init
   - sudo conda update conda --yes
+  - conda create --yes -n condaenv python=2.7
+  - conda install --yes -n condaenv pip
+  - conda update --yes conda
+  - source activate condaenv
   - deps='pip numpy'
   - conda create -p $HOME/py --yes $deps "python=$TRAVIS_PYTHON_VERSION"
   - export PATH=$HOME/py/bin:$PATH
+
 script:
   - python sklDj/tests/temp.py
