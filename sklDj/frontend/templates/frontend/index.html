@@ -1,7 +1,7 @@
 {% extends 'sklDj/base.html' %}
 {% block body_block %}
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -16,16 +16,16 @@
             <li>
             </li>
             <li><button type="button" class="btn btn-lg btn-primary">Language</button></li>
-
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             <li>
-            <form action="." enctype="multiport/form-data" class="navbar-form">
+            <form action="./upload.html" method="post" enctype"multiport/form-data">
                 {% csrf_token %}
                 {{ form }}
-                <input type="submit" class="btn-lg btn-primary" value="Submit" />
+                <input type="submit" value="Submit" />
             </form>
             </li>
-
-        </ul>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -33,20 +33,10 @@
 
 <div class="container">
 
-      <div class="jumbotron-fixed">
-
-            <form action="." method="post" enctype="multiport/form-data" align='middle'>
-                {% csrf_token %}
-                {{ form }}
-                <input type="submit" class="btn-lg btn-primary" value="Submit" />
-            </form>
-      </div>
-
       <div class="jumbotron">
             <h1>Web Interface for scikit-learn.</h1>
 
             <p>A web interface for sklearn, powered by Django. </p>
-
       </div>
 
       <!-- Main component for a primary marketing message or call to action -->
