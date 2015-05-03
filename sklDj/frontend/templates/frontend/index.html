@@ -17,11 +17,6 @@
             </li>
             <li><button type="button" class="btn btn-lg btn-primary">Language</button></li>
         </ul>
-            <form action="./upload.html" method="post" enctype"multiport/form-data" .form-inline>
-                {% csrf_token %}
-                {{ form }}
-                <input type="submit" value="Submit" />
-            </form>
     </div><!--/.nav-collapse -->
 </div>
 </nav>
@@ -39,7 +34,12 @@
       {% for algorithm in algorithms_list.all %}
       <div class="jumbotron">
 
-            <h1><a href="{% url 'frontend' %}algorithms/{{algorithm.slug}}">{{ algorithm.name }}</a><h1>
+            <h1><a href="{% url 'frontend' %}algorithms/{{algorithm.slug}}">{{ algorithm.name }}</a></h1>
+                    <form action="./{{algorithm.slug}}/" method="post" enctype"multiport/form-data" .form-inline>
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit" />
+            </form>
       </div>
      {% endfor %}
 

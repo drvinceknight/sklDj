@@ -25,6 +25,10 @@ def model_info(request, model_name):
     context = {'algorithm': algorithm}
     return render(request, 'frontend/models_info.html', context)
 
+def model_upload(request, model_name):
+    algorithm = get_object_or_404(Machine_Learning_Models, slug=model_name)
+    context = {'algorithm': algorithm}
+    return render(request, 'frontend/results.html', context)
 
 # Imaginary function to handle an uploaded file.
 def handle_uploaded_file(f):
