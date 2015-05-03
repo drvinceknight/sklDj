@@ -8,7 +8,7 @@ import csv
 #import matplotlib.pyplot as plt, mpld3
 #from sklearn.linear_model import LinearRegression
 
-from implementations import LinearRegression
+from implementations import *
 
 def index(request):
     algorithms_list = Machine_Learning_Models.objects.all()
@@ -23,7 +23,7 @@ def model_info(request, model_name):
     return render(request, 'frontend/models_info.html', context)
 
 def model_upload(request, model_name):
-    algorithms_list = Machine_Learning_Models.objects.all()
+    # algorithms_list = Machine_Learning_Models.objects.all()
     algorithm = get_object_or_404(Machine_Learning_Models, slug=model_name)
     # Assuming request.method is always POST
     #form = UploadFileForm(request.POST, request.FILES)
@@ -33,7 +33,7 @@ def model_upload(request, model_name):
     if form.is_valid():
         name = request.FILES['file']
         data = read_data(name)
-        implementation = LinearRegression(data)
+        implementation = implementations_dict[model_name](data)
         fig_html, coeff, intercept = implementation.run()
         return render_to_response('frontend/results.html', {'fig_html': fig_html,
             'algorithm': algorithm, 'name':name, 'coeff': coeff})
