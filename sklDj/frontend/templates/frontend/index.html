@@ -1,39 +1,35 @@
 {% extends 'sklDj/base.html' %}
 {% block body_block %}
 
-<nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-left">
+        </button>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-left">
             <li>
             </li>
             <li><button type="button" class="btn btn-lg btn-primary">Language</button></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-            <form action="./upload.html" method="post" enctype"multiport/form-data">
+        </ul>
+            <form action="./upload.html" method="post" enctype"multiport/form-data" .form-inline>
                 {% csrf_token %}
                 {{ form }}
                 <input type="submit" value="Submit" />
             </form>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    </div><!--/.nav-collapse -->
+</div>
+</nav>
 
 
 <div class="container">
 
-      <div class="jumbotron">
+      <div class="jumbotron" style="margin-top: 150px;" >
             <h1>Web Interface for scikit-learn.</h1>
 
             <p>A web interface for sklearn, powered by Django. </p>
