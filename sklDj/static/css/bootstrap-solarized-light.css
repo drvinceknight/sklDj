@@ -3823,6 +3823,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-left {
     float: left !important;
   }
+
+.navbar-center
+{
+    position: absolute;
+    width: 100%;
+    margin-left: 50px;
+    text-align: center;
+    margin: auto;
+}
+
   .navbar-right {
     float: right !important;
   }
@@ -4356,6 +4366,15 @@ a.list-group-item.active > .badge,
   margin-left: 3px;
 }
 .jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eee8d5;
+}
+.jumbotron-fixed {
+  position: fixed;
+  top: 50px;
+  left: 250px;
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
@@ -5767,3 +5786,9 @@ button.close {
     display: none !important;
   }
 }
+
+form { 
+margin: 0 auto; 
+width:250px;
+}
+
