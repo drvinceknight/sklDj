@@ -2,3 +2,5 @@ Django==1.8.1
 scipy==0.15
 matplotlib==1.4.3
 scikit-learn==0.15
+mpld3==0.2
+jinja2==2.7.3
