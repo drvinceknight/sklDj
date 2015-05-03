@@ -5800,3 +5800,8 @@ width:250px;
     text-align: center;
     margin: auto;
 }
+
+#jumbotron-man {
+    position: absolute;
+    bottom: 0;
+}

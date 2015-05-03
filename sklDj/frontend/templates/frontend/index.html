@@ -16,11 +16,18 @@
         <div class="jumbotron">
 
             <h1>{{ algorithm.name }}</h1>
+            <h2> Example Code</h2>
+            <div class="bootstrap-demo" style="width:50%">
+              <pre><p>
+    {{algorithm.example_code}}
+</p></pre>
+             </div> 
             <form action="./{{algorithm.slug}}/" method="post" enctype="multipart/form-data" .form-inline>
                 {% csrf_token %}
                 {{ form }}
                 <input type="submit" value="Submit" />
             </form>
+            
         </div>
         {% endfor %}
 
