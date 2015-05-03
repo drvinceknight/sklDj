@@ -35,7 +35,8 @@
       <div class="jumbotron">
 
             <h1><a href="{% url 'frontend' %}algorithms/{{algorithm.slug}}">{{ algorithm.name }}</a></h1>
-                    <form action="./{{algorithm.slug}}/" method="post" enctype"multiport/form-data" .form-inline>
+                    <form action="./{{algorithm.slug}}/"
+                        method="post" enctype="multipart/form-data" .form-inline>
                 {% csrf_token %}
                 {{ form }}
                 <input type="submit" value="Submit" />
