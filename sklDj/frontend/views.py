@@ -33,7 +33,10 @@ def model_upload(request, model_name):
     if form.is_valid():
         name = request.FILES['file']
         data = read_data(name)
-        implementation = implementations_dict[model_name](data)
+        try:
+            implementation = implementations_dict[model_name](data)
+        except KeyError:
+            return render_to_response('frontend/notimplemented.html', {'algorithm': algorithm})
         fig_html, coeff, intercept = implementation.run()
         return render_to_response('frontend/results.html', {'fig_html': fig_html,
             'algorithm': algorithm, 'name':name, 'coeff': coeff})
