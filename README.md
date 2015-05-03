@@ -37,8 +37,7 @@ Create a super user:
 
     python manage.py createsuperuser
 
-
- # Testing
+# Testing
 
 Testing on travis is very much a goal (PRs would be very welcome), at the moment
 tests needs to be run locally:
