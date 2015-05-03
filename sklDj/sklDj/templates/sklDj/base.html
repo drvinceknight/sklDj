@@ -13,7 +13,6 @@
 
     <body>
 
-        {% block nav_block %}
     <nav class="navbar navbar-inverse navbar-fixed-top">
 <div class="container">
     <div class="navbar-header">
@@ -24,15 +23,22 @@
             <span class="icon-bar"></span>
         </button>
     </div>
-    <a class="navbar-brand" href="/frontend/">sklDj</a>
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-left">
             <li><button type="button" class="btn btn-lg btn-primary">Language</button></li>
         </ul>
+    <a class="navbar-brand" href="/frontend/">sklDj</a>
+    
+    {% block backnav_block %}
+        <ul class="nav navbar-nav navbar-right">
+            <li><form>
+<input type="button" class="btn btn-lg btn-primary" value="Back" onclick="window.location.href='/frontend/'" />
+</form></li>
+        </ul>
+    {% endblock %}
     </div><!--/.nav-collapse -->
 </div>
 </nav>
-{% endblock %}
 
         {% block body_block %}{% endblock %}
     </body>
