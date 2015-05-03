@@ -1,4 +1,7 @@
 {% extends 'sklDj/base.html' %}
+
+{% block backnav_block%} {% endblock %}
+
 {% block body_block %}
 
     <div class="container">
@@ -12,7 +15,7 @@
         {% for algorithm in algorithms_list.all %}
         <div class="jumbotron">
 
-            <h1><a href="{% url 'frontend' %}algorithms/{{algorithm.slug}}">{{ algorithm.name }}</a></h1>
+            <h1>{{ algorithm.name }}</h1>
             <form action="./{{algorithm.slug}}/" method="post" enctype="multipart/form-data" .form-inline>
                 {% csrf_token %}
                 {{ form }}
