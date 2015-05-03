@@ -1,13 +1,19 @@
+{% extends 'sklDj/base.html' %}
+
+{% block body_block %}
+
+    <div class="container">
+        <div class="jumbotron" style="margin-top:150px">
+            You uploaded a file called '{{name}}'.
+            It contains:
+
+            <div id="content-main">
+                {{ fig_html|safe }}
+            </div>
 
 
-You uploaded a file called '{{name}}'.
-It contains:
+            the algorithm you wanted is {{algorithm}}
+        </div>
+    </div>
 
-<div id="content-main">
-    {{ fig_html|safe }}
-</div>
-
-
-the algorithm you wanted is {{algorithm}}
-
-{{coeff}}
+{% endblock %}
