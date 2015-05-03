@@ -1,27 +1,25 @@
 {% extends 'sklDj/base.html' %}
 {% block body_block %}
 
-<div class="container">
+    <div class="container">
 
-      <div class="jumbotron" style="margin-top: 150px;" >
+        <div class="jumbotron" style="margin-top: 150px;" >
             <h1>Web Interface for scikit-learn.</h1>
-
             <p>A web interface for sklearn, powered by Django. </p>
-      </div>
+        </div>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      {% for algorithm in algorithms_list.all %}
-      <div class="jumbotron">
+        <!-- Main component for a primary marketing message or call to action -->
+        {% for algorithm in algorithms_list.all %}
+        <div class="jumbotron">
 
             <h1><a href="{% url 'frontend' %}algorithms/{{algorithm.slug}}">{{ algorithm.name }}</a></h1>
-                    <form action="./{{algorithm.slug}}/"
-                        method="post" enctype="multipart/form-data" .form-inline>
+            <form action="./{{algorithm.slug}}/" method="post" enctype="multipart/form-data" .form-inline>
                 {% csrf_token %}
                 {{ form }}
                 <input type="submit" value="Submit" />
             </form>
-      </div>
-    {% endfor %}
+        </div>
+        {% endfor %}
 
     </div> <!-- /container -->
 
